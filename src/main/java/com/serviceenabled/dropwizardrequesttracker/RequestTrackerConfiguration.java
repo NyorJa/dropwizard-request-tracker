@@ -2,16 +2,16 @@ package com.serviceenabled.dropwizardrequesttracker;
 
 public class RequestTrackerConfiguration {
 
+	private String headerName = "X-Request-Tracker";
+	private String mdcKey = "Request-Tracker";
+	private Boolean addResponseHeader = false;
+
 	public RequestTrackerConfiguration() {}
 
 	public RequestTrackerConfiguration(String headerName, String mdcKey) {
 		setHeaderName(headerName);
 		setMdcKey(mdcKey);
 	}
-
-	private String headerName = "X-Request-Tracker";
-	private String mdcKey = "Request-Tracker";
-	private Boolean addResponseHeader = false;
 
 	public Boolean getAddResponseHeader() {
 		return this.addResponseHeader;
